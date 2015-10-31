@@ -1,24 +1,25 @@
 {
-  "name": "travel",
-  "version": "0.0.1",
-  "description": "Timeline of my travels",
-  "main": "index.js",
-  "scripts": {
-    "test": "npm run lint && npm run test:unit",
-    "lint": "eslint --rulesdir eslint_rules app/**/*.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vitorbal/travel.git"
-  },
-  "author": "Vitor Balocco <vitorbal@gmail.com> (https://github.com/vitorbal)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vitorbal/travel/issues"
-  },
-  "homepage": "https://github.com/vitorbal/travel",
+    "name": "Travel",
+    "version": "0.0.1",
+    "description": "Timeline of my travels",
+    "main": "index.js",
+    "scripts": {
+        "test": "npm run lint && npm run test:unit",
+        "lint": "eslint --rulesdir eslint_rules app/**/*.js",
+        "test:unit": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vitorbal/travel.git"
+    },
+    "author": "Vitor Balocco <vitorbal@gmail.com> (https://github.com/vitorbal)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vitorbal/travel/issues"
+    },
+    "homepage": "https://github.com/vitorbal/travel",
 
-  "devDependencies": {
-    "eslint": "^1.7.3"
-  }
+    "devDependencies": {
+        "eslint": "^1.7.3"
+    }
 }
