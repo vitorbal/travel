@@ -4,6 +4,13 @@
         "es6": true,
         "browser": true
     },
+    "ecmaFeatures": {
+        "modules": true,
+        "jsx": true
+    },
+    "plugins": [
+        "react"
+    ],
     // 0 - allowed
     // 1 - warning
     // 2 - error
@@ -149,6 +156,14 @@
                 "Event"
             ]
         }],
+
+        // React-specific rules
+        // https://github.com/yannickcr/eslint-plugin-react
+        //
+        "react/react-in-jsx-scope": 2,
+        "react/jsx-uses-react": 2,
+        // Enforce components methods order
+        "react/sort-comp": 2,
 
         //
         // Custom rules
