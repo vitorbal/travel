@@ -2,11 +2,10 @@ import 'normalize.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Hello from './component/Hello/hello';
+import App from './component/app/app';
 
 const appNode = document.createElement('div');
-// appNode.className = styles.app;
 appNode.id = 'app';
 
 document.body.appendChild(appNode);
-ReactDOM.render(<Hello/>, appNode);
+ReactDOM.render(<App />, appNode);
