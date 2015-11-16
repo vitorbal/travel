@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class TripTeaser extends Component {
-    render() {
-        return (
-            <div>
-                <span>{this.props.city}</span>, <span>{this.props.country}</span>
-            </div>
-        );
-    }
+export default function TripTeaser(props) {
+    return (
+        <div>
+            <span>{props.city}</span>, <span>{props.country}</span>
+        </div>
+    );
 }
