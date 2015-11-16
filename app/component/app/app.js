@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import TripTeaser from '../tripTeaser/tripTeaser';
 
 import styles from './app.css';
@@ -6,8 +7,8 @@ import styles from './app.css';
 export default class App extends Component {
     renderSingleTrip(tripData) {
         return (
-            <li className={styles.listItem} key={tripData.uuid}>
-                <TripTeaser city={tripData.city} country={tripData.country} />
+            <li className={ styles.listItem } key={ tripData.uuid }>
+                <TripTeaser city={ tripData.city } country={ tripData.country } />
             </li>
         );
     }
@@ -16,8 +17,8 @@ export default class App extends Component {
         return (
             <div>
                 <h1>Travels</h1>
-                <ol className={styles.list}>
-                    {this.props.travels.map(this.renderSingleTrip)}
+                <ol className={ styles.list }>
+                    { this.props.travels.map(this.renderSingleTrip) }
                 </ol>
             </div>
         );
