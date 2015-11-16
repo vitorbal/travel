@@ -8,14 +8,18 @@ export default class App extends Component {
     renderSingleTrip(tripData) {
         return (
             <li className={ styles.listItem } key={ tripData.uuid }>
-                <TripTeaser city={ tripData.city } country={ tripData.country } />
+                <TripTeaser
+                    city={ tripData.city }
+                    country={ tripData.country }
+                    startDate={ tripData.startDate }
+                    endDate={ tripData.endDate } />
             </li>
         );
     }
 
     render() {
         return (
-            <div>
+            <div className={ styles.base }>
                 <h1>Travels</h1>
                 <ol className={ styles.list }>
                     { this.props.travels.map(this.renderSingleTrip) }

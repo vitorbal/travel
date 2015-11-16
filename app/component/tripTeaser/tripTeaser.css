@@ -1,0 +1,4 @@
+.base {
+    composes: padding-all from "../../shared/layout.css";
+    border: 1px solid black;
+}

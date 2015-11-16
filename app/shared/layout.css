@@ -1,3 +1,11 @@
+.centered-horizontally {
+    margin: 0 auto;
+}
+
 .margin-bottom {
     margin-bottom: 20px;
+}
+
+.padding-all {
+    padding: 20px;
 }
