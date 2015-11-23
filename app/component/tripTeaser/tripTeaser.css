@@ -1,4 +1,11 @@
-.base {
-    composes: padding-all from "../../shared/layout.css";
+.wrapper {
     border: 1px solid black;
+}
+
+.coverImageWrapper {
+    height: 300px;
+}
+
+.contentWrapper {
+    composes: padding-all from "../../shared/layout.css";
 }

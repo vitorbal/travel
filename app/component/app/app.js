@@ -12,7 +12,8 @@ export default class App extends Component {
                     city={ tripData.city }
                     country={ tripData.country }
                     startDate={ tripData.startDate }
-                    endDate={ tripData.endDate } />
+                    endDate={ tripData.endDate }
+                    image={ tripData.image } />
             </li>
         );
     }
@@ -32,21 +33,22 @@ export default class App extends Component {
 App.defaultProps = {
     // TODO: make sure uuids are unique
     // TODO: use date objects for dates
-    // TODO: add pictures
     travels: [
         {
             uuid: '11938298353534',
             city: 'Madrid',
             country: 'Spain',
             startDate: '15 October 2015',
-            endDate: '19 October 2015'
+            endDate: '19 October 2015',
+            image: '/cities/madrid.jpg'
         },
         {
             uuid: '11938298529524',
             city: 'Amsterdam',
             country: 'Holland',
             startDate: '26 November 2015',
-            endDate: '30 November 2015'
+            endDate: '30 November 2015',
+            image: '/cities/madrid.jpg'
         }
     ]
 };

@@ -1,6 +1,6 @@
 .base {
     composes: centered-horizontally from "../../shared/layout.css";
-    max-width: 800px;
+    max-width: 600px;
 }
 
 .list {
