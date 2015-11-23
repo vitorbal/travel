@@ -4,7 +4,7 @@ import CoverImage from '../coverImage/coverImage';
 
 import styles from './tripTeaser.css';
 
-export default function TripTeaser(props) {
+const TripTeaser = (props) => {
     return (
         <div className={ styles.wrapper }>
             <div className={ styles.coverImageWrapper }>
@@ -17,4 +17,6 @@ export default function TripTeaser(props) {
             </div>
         </div>
     );
-}
+};
+
+export default TripTeaser;
