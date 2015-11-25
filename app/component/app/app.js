@@ -32,22 +32,21 @@ export default class App extends Component {
 
 App.defaultProps = {
     // TODO: make sure uuids are unique
-    // TODO: use date objects for dates
     travels: [
         {
             uuid: '11938298353534',
             city: 'Madrid',
             country: 'Spain',
-            startDate: '15 October 2015',
-            endDate: '19 October 2015',
+            startDate: '2015-10-15',
+            endDate: '2015-10-19',
             image: '/cities/madrid.jpg'
         },
         {
             uuid: '11938298529524',
             city: 'Amsterdam',
             country: 'Holland',
-            startDate: '26 November 2015',
-            endDate: '30 November 2015',
+            startDate: '2015-11-26',
+            endDate: '2015-11-30',
             image: '/cities/madrid.jpg'
         }
     ]
