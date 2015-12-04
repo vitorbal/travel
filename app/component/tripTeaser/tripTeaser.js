@@ -20,7 +20,7 @@ const renderDuration = (startDate, endDate) => {
     );
 };
 
-export default (props) => {
+const tripTeaser = (props) => {
     return (
         <div className={ styles.wrapper }>
             <div className={ styles.coverImageWrapper }>
@@ -34,3 +34,5 @@ export default (props) => {
         </div>
     );
 };
+
+export default tripTeaser;
