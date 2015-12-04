@@ -119,7 +119,7 @@ module.exports = function makeWebpackConfig(options) {
     // More info: https://github.com/css-modules/css-modules
     const localIdentName = BUILD
         ? '[hash:base64]'
-        : '[path][name]---[local]---[hash:base64:5]';
+        : '[name]__[local]--[hash:base64:5]';
 
     // Reference: https://github.com/webpack/css-loader
     // Allow loading css through js and getting the className
