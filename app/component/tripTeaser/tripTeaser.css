@@ -11,5 +11,5 @@
 }
 
 .contentWrapper {
-    composes: padding-all from "../../shared/layout.css";
+    composes: margin-all from "../../shared/layout.css";
 }
