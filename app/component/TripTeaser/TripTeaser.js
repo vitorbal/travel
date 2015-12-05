@@ -1,9 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 
-import CoverImage from '../coverImage/coverImage';
+import CoverImage from '../CoverImage/CoverImage';
 
-import styles from './tripTeaser.css';
+import styles from './TripTeaser.css';
 
 const DATE_FORMAT = 'D MMM YYYY'; // "13 Nov 2015"
 
@@ -15,12 +15,10 @@ const renderDuration = (startDate, endDate) => {
     const endFormatted = end.format(DATE_FORMAT);
     const duration = end.diff(start, 'days');
 
-    return (
-        <p>{ startFormatted } - { endFormatted } ({ duration } { duration > 1 ? 'days' : 'day' })</p>
-    );
+    return <p>{ startFormatted } - { endFormatted } ({ duration } { duration > 1 ? 'days' : 'day' })</p>;
 };
 
-const tripTeaser = (props) => {
+const TripTeaser = (props) => {
     return (
         <div className={ styles.wrapper }>
             <div className={ styles.coverImageWrapper }>
@@ -35,4 +33,4 @@ const tripTeaser = (props) => {
     );
 };
 
-export default tripTeaser;
+export default TripTeaser;

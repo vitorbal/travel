@@ -164,6 +164,8 @@
         "react/jsx-uses-react": 2,
         // Enforce components methods order
         "react/sort-comp": 2,
+        // Enforce PascalCase for user-defined JSX components
+        "react/jsx-pascal-case": 2,
 
         //
         // Custom rules

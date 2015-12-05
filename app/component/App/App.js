@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import TripTeaser from '../tripTeaser/tripTeaser';
+import TripTeaser from '../TripTeaser/TripTeaser';
 
-import styles from './app.css';
+import styles from './App.css';
 
 export default class App extends Component {
     renderSingleTrip(tripData) {
