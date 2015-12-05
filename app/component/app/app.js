@@ -30,24 +30,20 @@ export default class App extends Component {
     }
 }
 
-App.defaultProps = {
-    // TODO: make sure uuids are unique
-    travels: [
-        {
-            uuid: '11938298353534',
-            city: 'Madrid',
-            country: 'Spain',
-            startDate: '2015-10-15',
-            endDate: '2015-10-19',
-            image: '/cities/madrid.jpg'
-        },
-        {
-            uuid: '11938298529524',
-            city: 'Amsterdam',
-            country: 'Holland',
-            startDate: '2015-11-26',
-            endDate: '2015-11-30',
-            image: '/cities/madrid.jpg'
-        }
-    ]
-};
+// TODO: make uuids that are really unique
+const getPseudoRandomNumber = () => Math.floor(Math.random() * 1000000000);
+
+// Generate some fixture data
+// TODO: use real data
+let travels = [];
+for (let i = 0; i < 50; i++) {
+    travels.push({
+        uuid: getPseudoRandomNumber(),
+        city: 'Madrid',
+        country: 'Spain',
+        startDate: '2015-10-15',
+        endDate: '2015-10-19',
+        image: '/cities/madrid.jpg'
+    });
+}
+App.defaultProps = { travels: travels };
