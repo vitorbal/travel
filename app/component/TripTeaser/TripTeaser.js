@@ -33,4 +33,12 @@ const TripTeaser = (props) => {
     );
 };
 
+TripTeaser.propTypes = {
+    city: React.PropTypes.string.isRequired,
+    country: React.PropTypes.string.isRequired,
+    startDate: React.PropTypes.string.isRequired,
+    endDate: React.PropTypes.string.isRequired,
+    image: React.PropTypes.string.isRequired
+};
+
 export default TripTeaser;

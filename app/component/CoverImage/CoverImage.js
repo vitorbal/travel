@@ -9,4 +9,8 @@ const CoverImage = (props) => {
     );
 };
 
+CoverImage.propTypes = {
+    src: React.PropTypes.string.isRequired
+};
+
 export default CoverImage;

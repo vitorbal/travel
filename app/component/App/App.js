@@ -30,11 +30,22 @@ export default class App extends Component {
     }
 }
 
-// TODO: make uuids that are really unique
-const getPseudoRandomNumber = () => Math.floor(Math.random() * 1000000000);
+App.propTypes = {
+    travels: React.PropTypes.arrayOf(React.PropTypes.shape({
+        uuid: React.PropTypes.number.isRequired,
+        city: React.PropTypes.string.isRequired,
+        country: React.PropTypes.string.isRequired,
+        startDate: React.PropTypes.string.isRequired,
+        endDate: React.PropTypes.string.isRequired,
+        image: React.PropTypes.string.isRequired
+    }))
+};
 
 // Generate some fixture data
 // TODO: use real data
+// TODO: make uuids that are really unique
+const getPseudoRandomNumber = () => Math.floor(Math.random() * 1000000000);
+
 let travels = [];
 for (let i = 0; i < 50; i++) {
     travels.push({

@@ -166,6 +166,8 @@
         "react/sort-comp": 2,
         // Enforce PascalCase for user-defined JSX components
         "react/jsx-pascal-case": 2,
+        // Prevent components without propTypes
+        "react/prop-types": 2,
 
         //
         // Custom rules
