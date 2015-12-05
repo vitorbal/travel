@@ -184,7 +184,8 @@ module.exports = function makeWebpackConfig(options) {
     // Render index.html
     config.plugins.push(
         new HtmlWebpackPlugin({
-            title: 'Travel'
+            template: 'app/index.html',
+            inject: 'body'
         })
     );
 

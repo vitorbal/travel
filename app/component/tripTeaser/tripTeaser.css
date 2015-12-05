@@ -1,9 +1,13 @@
 .wrapper {
-    border: 1px solid black;
+    border-radius: 4px;
+
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+    background-color: white;
+    overflow: hidden;
 }
 
 .coverImageWrapper {
-    height: 300px;
+    height: 180px;
 }
 
 .contentWrapper {

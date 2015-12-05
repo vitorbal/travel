@@ -1,6 +1,9 @@
 .base {
-    composes: centered-horizontally from "../../shared/layout.css";
+    composes: centered-horizontally from '../../shared/layout.css';
+
     max-width: 600px;
+    min-width: 320px;
+    padding: 0 10px;
 }
 
 .list {
@@ -9,5 +12,5 @@
 }
 
 .listItem {
-    composes: margin-bottom from "../../shared/layout.css";
+    composes: margin-bottom from '../../shared/layout.css';
 }
