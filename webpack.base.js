@@ -177,17 +177,19 @@ module.exports = function makeWebpackConfig(options) {
         // Can be used to replace other values as well
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
-        })
-    ];
+        }),
 
-    // Reference: https://github.com/ampedandwired/html-webpack-plugin
-    // Render index.html
-    config.plugins.push(
+        // Reference: https://github.com/ampedandwired/html-webpack-plugin
+        // Render index.html
         new HtmlWebpackPlugin({
             template: 'app/index.html',
             inject: 'body'
-        })
-    );
+        }),
+
+        // Reference: https://github.com/webpack/webpack/issues/198#issuecomment-62014800
+        // Prevent webpack of including all the optional locale modules of moment.js
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+    ];
 
     // Add build specific plugins
     if (BUILD) {
