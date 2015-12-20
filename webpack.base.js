@@ -84,7 +84,7 @@ module.exports = function makeWebpackConfig(options) {
 
         query: {
             presets: ['es2015', 'react'],
-            plugins: []
+            plugins: ['transform-runtime']
         }
     };
 
