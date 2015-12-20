@@ -42,11 +42,11 @@ module.exports = function makeWebpackConfig(options) {
      */
     config.output = {
         // Absolute output directory
-        path: BUILD ? __dirname + '/build' : __dirname + '/public',
+        path: BUILD ? __dirname + '/public/build' : __dirname + '/public',
 
         // Output path from the view of the page
         // Uses webpack-dev-server in development
-        publicPath: BUILD ? '/' : 'http://localhost:8080/',
+        publicPath: BUILD ? '/build' : 'http://localhost:8080/',
 
         // Filename for entry points
         // Only adds hash in build mode
