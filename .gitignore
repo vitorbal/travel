@@ -1,4 +1,11 @@
 .DS_Store
 *.log
+
+# npm
 node_modules/
-/public/build
+
+# build artifacts
+public/*.js
+public/*.css
+public/*.map
+public/index.html
