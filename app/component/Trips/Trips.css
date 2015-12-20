@@ -1,0 +1,22 @@
+.list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.listItem {
+    composes: margin-bottom from '../../shared/layout.css';
+}
+
+/* Slide in animation */
+.slideIn {
+    opacity: 0.01;
+    transform: translate3d(0, 10%, 0);
+}
+
+.slideIn-active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    /* easeOutCubic */
+    transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000),
+                opacity 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}

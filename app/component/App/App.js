@@ -1,44 +1,22 @@
 import React, { Component } from 'react';
 
-import TripTeaser from '../TripTeaser/TripTeaser';
+import Trips from '../Trips/Trips';
 
 import styles from './App.css';
 
 export default class App extends Component {
-    renderSingleTrip(tripData) {
-        return (
-            <li className={ styles.listItem } key={ tripData.uuid }>
-                <TripTeaser
-                    city={ tripData.city }
-                    country={ tripData.country }
-                    startDate={ tripData.startDate }
-                    endDate={ tripData.endDate }
-                    image={ tripData.image } />
-            </li>
-        );
-    }
-
     render() {
         return (
             <div className={ styles.base }>
                 <h1>Travels</h1>
-                <ol className={ styles.list }>
-                    { this.props.travels.map(this.renderSingleTrip) }
-                </ol>
+                <Trips trips={ this.props.trips } />
             </div>
         );
     }
 }
 
 App.propTypes = {
-    travels: React.PropTypes.arrayOf(React.PropTypes.shape({
-        uuid: React.PropTypes.number.isRequired,
-        city: React.PropTypes.string.isRequired,
-        country: React.PropTypes.string.isRequired,
-        startDate: React.PropTypes.string.isRequired,
-        endDate: React.PropTypes.string.isRequired,
-        image: React.PropTypes.string.isRequired
-    }))
+    trips: React.PropTypes.array
 };
 
 // Generate some fixture data
@@ -46,9 +24,9 @@ App.propTypes = {
 // TODO: make uuids that are really unique
 const getPseudoRandomNumber = () => Math.floor(Math.random() * 1000000000);
 
-let travels = [];
+let trips = [];
 for (let i = 0; i < 50; i++) {
-    travels.push({
+    trips.push({
         uuid: getPseudoRandomNumber(),
         city: 'Madrid',
         country: 'Spain',
@@ -57,4 +35,4 @@ for (let i = 0; i < 50; i++) {
         image: '/cities/madrid.jpg'
     });
 }
-App.defaultProps = { travels: travels };
+App.defaultProps = { trips: trips };

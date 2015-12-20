@@ -5,12 +5,3 @@
     min-width: 320px;
     padding: 0 10px;
 }
-
-.list {
-    padding: 0;
-    list-style-type: none;
-}
-
-.listItem {
-    composes: margin-bottom from '../../shared/layout.css';
-}
