@@ -16,8 +16,8 @@ const renderSingleTrip = (tripData) => {
 
 const transitionConfig = {
     transitionName: {
-        appear: styles.slideIn,
-        appearActive: styles['slideIn-active']
+        appear: styles.slideInStart,
+        appearActive: styles.slideInEnd
     },
     transitionEnterTimeout: 600,
     transitionLeaveTimeout: 0,
