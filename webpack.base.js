@@ -88,26 +88,24 @@ module.exports = function makeWebpackConfig(options) {
         }
     };
 
-    // TODO: fix after react-transform plugin is updated to support Babel 6
-    //
     // Add babel-plugin-react-transform when not in build mode
     // Reference: https://github.com/gaearon/babel-plugin-react-transform
-    // if (!BUILD) {
-    //     jsLoader.query.plugins.push(['react-transform', {
-    //         transforms: [{
-    //             // Enable automatic hot reload of react components
-    //             // Reference: https://github.com/gaearon/react-transform-hmr
-    //             transform: 'react-transform-hmr',
-    //             imports: ['react'],
-    //             locals: ['module']
-    //         }, {
-    //             // Catch errors inside of react component render function and show a screen
-    //             // Reference: https://github.com/gaearon/react-transform-catch-errors
-    //             transform: 'react-transform-catch-errors',
-    //             imports: ['react', 'redbox-react']
-    //         }]
-    //     }]);
-    // }
+    if (!BUILD) {
+        jsLoader.query.plugins.push(['react-transform', {
+            transforms: [{
+                // Enable automatic hot reload of react components
+                // Reference: https://github.com/gaearon/react-transform-hmr
+                transform: 'react-transform-hmr',
+                imports: ['react'],
+                locals: ['module']
+            }, {
+                // Catch errors inside of react component render function and show a screen
+                // Reference: https://github.com/gaearon/react-transform-catch-errors
+                transform: 'react-transform-catch-errors',
+                imports: ['react', 'redbox-react']
+            }]
+        }]);
+    }
 
     // Add jsLoader to the loader list
     config.module.loaders.push(jsLoader);
